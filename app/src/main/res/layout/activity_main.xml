@@ -10,7 +10,7 @@
         android:id="@+id/screen"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="dd"
+        android:text=""
         android:gravity="end|center"
         android:textSize="38sp"
         android:layout_marginTop="15dp"
@@ -44,15 +44,15 @@
             />
         <Button
             android:text="1"
-            android:id="@+id/one"
+            android:id="@+id/button-1"
             />
         <Button
             android:text="2"
-            android:id="@+id/two"
+            android:id="@+id/button-2"
             />
         <Button
             android:text="3"
-            android:id="@+id/three"
+            android:id="@+id/button-3"
             />
         <Button
             android:text="+"
@@ -60,15 +60,15 @@
             />
         <Button
             android:text="4"
-            android:id="@+id/four"
+            android:id="@+id/button-4"
             />
         <Button
             android:text="5"
-            android:id="@+id/five"
+            android:id="@+id/button-5"
             />
         <Button
             android:text="6"
-            android:id="@+id/six"
+            android:id="@+id/button-6"
             />
         <Button
             android:text="-"
@@ -76,15 +76,15 @@
             />
         <Button
             android:text="7"
-            android:id="@+id/seven"
+            android:id="@+id/button-7"
             />
         <Button
             android:text="8"
-            android:id="@+id/eight"
+            android:id="@+id/button-8"
             />
         <Button
             android:text="9"
-            android:id="@+id/nine"
+            android:id="@+id/button-9"
             />
         <Button
             android:text="="
@@ -94,7 +94,7 @@
             />
         <Button
             android:text="0"
-            android:id="@+id/zero"
+            android:id="@+id/button-0"
             />
         <Button
             android:layout_column="2"
