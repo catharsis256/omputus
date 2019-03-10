@@ -1,4 +1,4 @@
-package com.catharsis256.omputus
+package com.catharsis256.omputus.model
 
 class Constant {
     companion object {

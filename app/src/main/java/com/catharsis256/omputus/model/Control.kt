@@ -1,4 +1,6 @@
-package com.catharsis256.omputus
+package com.catharsis256.omputus.model
+
+import com.catharsis256.omputus.R
 
 enum class Control(override val id: Int): HasID {
 

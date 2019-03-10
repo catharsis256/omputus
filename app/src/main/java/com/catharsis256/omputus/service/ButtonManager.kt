@@ -1,12 +1,16 @@
-package com.catharsis256.omputus
+package com.catharsis256.omputus.service
 
 import android.util.Log
 import android.view.View
+import android.widget.TextView
+import com.catharsis256.omputus.R
+import com.catharsis256.omputus.model.*
 import kotlin.properties.Delegates
 
 internal class ButtonManager {
 
     private var keeper: ButtonKeeper by Delegates.notNull()
+    private var screen: TextView by Delegates.notNull()
 
     fun <T : View> init(idToView: (Int) -> T?) {
         keeper = ButtonKeeper(
@@ -14,6 +18,32 @@ internal class ButtonManager {
                 findAndStore(controlPad, idToView),
                 findAndStore(arithmeticPad, idToView)
         )
+        screen = (idToView(R.id.screen) as? TextView)
+                ?: throw AssertionError("Screen with ID [${R.id.screen}] has not found")
+    }
+
+    fun activate() {
+        with(keeper) {
+            for ((key, value) in numbers) {
+                value.setOnClickListener {
+                    screen.text = (screen.text.toString() + key.toString())
+                }
+            }
+
+            for ((key, value) in arithmetic) {
+                value.setOnClickListener {
+                    when(key) {
+                        Arithmetic.SQUARE -> null
+                        Arithmetic.POWER -> null
+                        Arithmetic.MULTIPLICATION -> null
+                        Arithmetic.DIVISION -> null
+                        Arithmetic.SUBTRACTION -> null
+                        Arithmetic.ADDITION -> null
+
+                    }
+                }
+            }
+        }
     }
 
 

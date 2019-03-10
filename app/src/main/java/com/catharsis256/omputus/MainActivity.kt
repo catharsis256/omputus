@@ -3,6 +3,7 @@ package com.catharsis256.omputus
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
+import com.catharsis256.omputus.service.ButtonManager
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,6 +17,8 @@ class MainActivity : AppCompatActivity() {
             init {
                 findViewById(it) as? View
             }
+        }.also {
+            it.activate()
         }
 
     }
